@@ -1,6 +1,11 @@
+// app/layout.tsx (or your RootLayout file)
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
+import { CartProvider } from "./Context/CartContext";
+import CartIcon from "./components/CartIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +21,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <Navbar /> {/* Navbar is included within the body */}
+        <CartProvider>
+          <CartIcon />
+          <main className="flex-grow">
+            {children}
+          </main>
+        </CartProvider>
+        <Footer />
+      </body>
     </html>
   );
 }
