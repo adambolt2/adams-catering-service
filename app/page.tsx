@@ -94,7 +94,7 @@ export default function Home() {
           height: '500px', // Increased height
           width: '100%', // Full width of the container
           animation: servicesInView ? 'fadeIn 1s ease-out forwards' : 'none',
-          animationDelay: servicesInView ? '0.2s' : 'none', // Increased delay
+          animationDelay: servicesInView ? '0.4s' : 'none', // Increased delay
         }}
       >
         <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-lg text-center w-full h-full flex flex-col justify-center">
@@ -113,7 +113,7 @@ export default function Home() {
           height: '500px', // Increased height
           width: '100%', // Full width of the container
           animation: servicesInView ? 'fadeIn 1s ease-out forwards' : 'none',
-          animationDelay: servicesInView ? '0.4s' : 'none', // Increased delay
+          animationDelay: servicesInView ? '0.6s' : 'none', // Increased delay
         }}
       >
         <div className="bg-black bg-opacity-50 p-8 rounded-lg shadow-lg text-center w-full h-full flex flex-col justify-center">

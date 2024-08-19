@@ -3,9 +3,11 @@
 import React, { useEffect } from 'react';
 import { useCart } from '../Context/CartContext';
 import { useRouter } from 'next/navigation';
+import { useLogin } from '../Context/LoginContext';
 
 const CartPage = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
+  const { isLoggedIn, logout } = useLogin();
 
   // Calculate the total price
   const { push } = useRouter(); // Use push method from useRouter
@@ -22,7 +24,13 @@ const CartPage = () => {
   const totalPrice = cartItems.reduce((total, item) => total + item.pricePerPiece * item.quantity, 0);
 
   const handleCheckout = () => {
+    if(!isLoggedIn){
+      push('/Login'); 
+
+    } else {
     // Implement checkout logic here
+
+    }
   };
 
   if (cartItems.length === 0) {

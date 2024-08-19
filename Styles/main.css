@@ -43,6 +43,18 @@ nav a:hover {
 	color: var(--secondaryColor);
 }
 
+
+.nav-link-custom a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+
+.nav-link-custom:hover {
+	color: var(--secondaryColor);
+}
+
+
 header .nav-btn {
 	padding: 5px;
 	cursor: pointer;
@@ -95,5 +107,9 @@ nav {
 
 	nav a {
 		font-size: 1.5rem;
+	}
+	.nav-link-custom {
+		font-size: 1.5rem;
+
 	}
 }
